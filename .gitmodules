@@ -1,0 +1,3 @@
+[submodule "themes/h5bp"]
+	path = themes/h5bp
+	url = git@github.com:brianarn/hugo-theme-h5bp.git
