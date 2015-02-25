@@ -1,10 +1,15 @@
 ---
 baseurl: "http://www.randomthink.net/"
 title: "RandomThink.net"
+
 languageCode: "en-us"
 metaDataFormat: "yaml"
-permalinks:
+
 params:
   author: "Brian Arnold"
-  username: "brianarn"
-  blog: /:year/:month/:title/
+  twitter: "brianarn"
+  github: "brianarn"
+  googleAnalytics: "UA-279164-1"
+
+permalinks:
+  blog: /blog/:year/:month/:title/
