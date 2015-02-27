@@ -12,4 +12,4 @@ params:
   googleAnalytics: "UA-279164-1"
 
 permalinks:
-  blog: /blog/:year/:month/:title/
+  blog: /blog/:year/:month/:slug/
