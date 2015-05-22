@@ -1,0 +1,21 @@
+<!doctype html>
+    <head class="no-js" lang="{{ .Site.LanguageCode}}">
+        {{ partial "head-content.html" . }}
+    </head>
+    <body>
+        <div class="container">
+            {{ partial "page-header.html" }}
+
+            <h2>List of all posts</h2>
+
+            <ul>
+                {{ range .Data.Pages }}
+                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
+            </ul>
+
+        </div> <!-- /.container -->
+        {{ partial "body-scripts.html" . }}
+        {{ partial "google-analytics.html" . }}
+    </body>
+</html>

@@ -4,38 +4,37 @@
     </head>
     <body>
         <div class="container">
-            <div class="page-header">
-                <h1>RandomThink.net <small>Code and life and such</small></h1>
-            </div> <!-- /.page-header -->
+            {{ partial "page-header.html" . }}
 
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        </button>
-                    </div>
+            <div class="row">
+                <div class="col-md-10">
 
-                    <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">More later</a></li>
+                    <div class="content">
+                        <h2>About Me</h2>
+                        <p>Hi! I'm Brian Arnold Sinclair. This is my horribly-designed site because I'm a terrible designer. I'm continuously working on something different, but this is what I have for now.</p>
+                        <p>I'm a software engineer in the southwest US, working JavaScript for a living. I have a beautiful wife and have for over 15 years now, and we have a cute little boy and two adorable puppies. Life is pretty great.</p>
+                        <p>Someday I'll actually get back to this thing and make it less terrible, but it is what it is for now.</p>
+                        <h3>"Recent" posts</h3>
+                        <ul>
+                            {{ range first 3 .Data.Pages }}
+                            <li>{{ .Render "summary" }}</li>
+                            {{ end }}
                         </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div><!-- /.container-fluid -->
-            </nav>
-
-            <div class="content">
-                <img src="{{ .Site.BaseUrl }}img/brian-headshot-300.jpg" alt="Brian" role="presentation" class="pull-right img-responsive img-thumbnail">
-                <p>
-                    Blah blah something more extensive will go here later.
-                </p>
-            </div> <!-- /.content -->
-        </div> <!-- /.container -->
+                        <p>Check out the <a href="/blog">full list of posts</a> if you really want to go digging.</p>
+                        <h3>Other Places I'm at</h3>
+                        <ul>
+                            <li><a href="http://twitter.com/brianarn">@brianarn</a> on Twitter &mdash; probably the easiest way to reach me, though that username at Gmail also works - y'know, if you like email.</li>
+                            <li><a href="/blog/">My blog</a> which is old and a little stale except maybe the last one or two posts.</li>
+                            <li><a href="http://facebook.com/brianarn">Me on Facebook</a> &mdash; I typically don't add people I don't really know, but if you know me and I know you, friend me maybe? I post pictures of my kid and more personal stuff here.</li>
+                            <li><a href="http://www.flickr.com/photos/brianarn">Photos on Flickr</a>, which I'll likely be using more since they've gotten pretty awesome in their last update.</li>
+                            <li><a href="http://github.com/brianarn">My repos on Github</a>, which are mostly half-finished, but you can also find the full source to my labs and blog(s) on there. Mostly JavaScript because that's what I love these days, and likely will for a long time.</li>
+                            <li><a href="http://youtube.com/brianarnold79">My YouTube profile</a> &mdash; not that I ever really post video, but hey, I mentioned that I don't have brianarn there, so I figured I should link it.</li>
+                            <li>I've often on <a href="http://freenode.net/">freenode</a>. My username there is brianarn, but if you've read this far you likely knew that.</li>
+                            <li>Typically, anywhere that a username is involved, I'm brianarn - except YouTube, someone beat me there, and AIM (had it, but had to give it up when I quit working for AOL)</li>
+                        </ul>
+                    </div> <!-- /.content -->
+                </div><!--/.row-->
+            </div> <!-- /.container -->
         {{ partial "body-scripts.html" . }}
         {{ partial "google-analytics.html" . }}
     </body>
